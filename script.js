@@ -93,7 +93,7 @@ const dialog = [
       { label: "Nein", next: "tease" }
     ]
   },
-  { text: "Gut. Dann lass uns anfangen.", buttons: [{ label: "Ich bin bereit ❤️", next: "gift" }] }
+  { text: "Gut. Bist du bereit?.", buttons: [{ label: "Ich bin bereit ❤️", next: "gift" }] }
 ];
 
 const dialogEl = document.getElementById("dialog");
@@ -152,7 +152,7 @@ function startMiniQuest(mode) {
   questStep = 0;
   questIntroText =
     mode === "soft"
-      ? "Dachte ich mir 😌 Dann spiel kurz mit mir."
+      ? "Ich will dich nämlich was fragen 😌 Hast du kurz Zeit?"
       : "Ach ja? 😏 Dann lass uns das testen.";
   showQuestPopup();
 }
@@ -206,7 +206,7 @@ function showFinalScreen() {
   app.innerHTML = `
     <div class="final">
       <h1 class="pulse">Happy Valentinstag ❤️</h1>
-      <p>Ich bin sehr froh, dass es dich gibt.</p>
+      <p>Liebe Hannah, möchtest du den Tag mit mir verbringen?</p>
     </div>
   `;
 
